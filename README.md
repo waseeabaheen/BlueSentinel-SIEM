@@ -1,18 +1,24 @@
 # BlueSentinel SIEM 🛡️
 
-A compact, educational SIEM you can run locally or in Docker. It ingests logs (syslog UDP/TCP and files), normalizes to a simple schema, stores to SQLite, evaluates YAML rules for detections (including windowed aggregations), and exposes a FastAPI for querying events/alerts.
+A compact, hands-on SIEM you can run locally or with Docker. It ingests syslog (UDP) and file logs, normalizes them into a simple common schema, stores everything in SQLite, evaluates YAML detection rules (including sliding-window aggregations), and exposes a FastAPI for querying events and alerts.
 
-> Perfect as a portfolio project: clean architecture, tests, CI, Docker, and clear docs.
+Features
 
-## Features
-- ⚙️ **Ingest**: syslog (UDP on 5514), file ingestion endpoint, sample logs included
-- 🧭 **Normalize**: Apache access, Linux auth (sshd), JSON (CloudTrail-like) mappers → common schema
-- 🔎 **Detect**: YAML-based rules with boolean conditions + sliding window aggregations
-- 🗃️ **Store**: SQLite (file) by default
-- 🌐 **API**: FastAPI endpoints for events, alerts, and stats (Swagger UI at `/docs`)
-- 🧪 **Tests**: pytest for rules & parsers
-- 🐳 **Docker**: single-container setup with `docker compose up`
-- 🛡️ **MITRE tags**: sample rules mapped to ATT&CK tactics/techniques
+⚙️ Ingest: syslog (UDP on 5514) and a file-ingest endpoint; sample logs included
+
+🧭 Normalize: Apache access, Linux auth (sshd), and JSON (CloudTrail-style) mappers → common schema
+
+🔎 Detect: YAML-based rules with boolean conditions + sliding-window aggregations
+
+🗃️ Store: SQLite by default (simple and portable)
+
+🌐 API: FastAPI endpoints for events, alerts, and stats (Swagger UI at /docs)
+
+🧪 Tests: pytest coverage for parsers and rules
+
+🐳 Docker: single-container setup with docker compose up
+
+🛡️ MITRE mapping: sample rules tagged to MITRE ATT&CK tactics/techniques
 
 ## Quickstart
 
@@ -62,7 +68,6 @@ BlueSentinel-SIEM/
 ├── docker-compose.yml
 ├── Dockerfile
 ├── requirements.txt
-├── LICENSE
 └── README.md
 ```
 
@@ -88,4 +93,3 @@ We use a compact, Elastic-like schema for portability:
 
 ---
 
-**License**: MIT. Educational purposes only—do not rely on this for production defense without rigorous testing.
