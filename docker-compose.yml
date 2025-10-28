@@ -1,0 +1,11 @@
+services:
+  bluesentinel:
+    build: .
+    ports:
+      - "8000:8000"
+      - "5514:5514/udp"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./rules:/app/rules
+      - ./samples:/app/samples
