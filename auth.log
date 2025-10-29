@@ -1,0 +1,11 @@
+Oct 12 22:14:15 myhost sshd[12345]: Failed password for root from 192.168.1.10 port 5555 ssh2
+Oct 12 22:14:20 myhost sshd[12345]: Failed password for root from 192.168.1.10 port 5555 ssh2
+Oct 12 22:14:25 myhost sshd[12345]: Failed password for root from 192.168.1.10 port 5555 ssh2
+Oct 12 22:14:30 myhost sshd[12345]: Failed password for root from 192.168.1.10 port 5555 ssh2
+Oct 12 22:14:35 myhost sshd[12345]: Failed password for root from 192.168.1.10 port 5555 ssh2
+Oct 12 22:14:40 myhost sshd[12345]: Failed password for root from 192.168.1.10 port 5555 ssh2
+Oct 12 22:14:45 myhost sshd[12345]: Failed password for root from 192.168.1.10 port 5555 ssh2
+Oct 12 22:14:50 myhost sshd[12345]: Failed password for root from 192.168.1.10 port 5555 ssh2
+Oct 12 22:14:55 myhost sshd[12345]: Failed password for root from 192.168.1.10 port 5555 ssh2
+Oct 12 22:15:00 myhost sshd[12345]: Failed password for root from 192.168.1.10 port 5555 ssh2
+Oct 12 22:16:00 myhost sshd[12345]: Accepted password for admin from 203.0.113.5 port 6022 ssh2

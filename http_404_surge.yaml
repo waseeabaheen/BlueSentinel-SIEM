@@ -1,0 +1,15 @@
+id: RULE_HTTP_404_SURGE
+title: HTTP 404 Surge
+severity: medium
+description: Detect >=20 HTTP 404 responses from a single IP within 10 minutes
+tags: [mitre-attack.T1083, discovery]
+where:
+  all:
+    - field: event.module
+      equals: apache
+    - field: http.status_code
+      equals: 404
+aggregate:
+  group_by: source.ip
+  within: 10m
+  count: ">=20"

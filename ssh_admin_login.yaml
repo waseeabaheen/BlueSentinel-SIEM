@@ -1,0 +1,13 @@
+id: RULE_SSH_ADMIN_LOGIN
+title: SSH login to admin/root
+severity: medium
+description: Successful SSH login to privileged account.
+tags: [mitre-attack.T1078, valid-accounts]
+where:
+  all:
+    - field: event.module
+      equals: auth
+    - field: event.action
+      equals: ACCEPTED_LOGIN
+    - field: user.name
+      regex: "^(root|admin)$"

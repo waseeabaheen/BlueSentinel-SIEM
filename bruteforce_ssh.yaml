@@ -1,0 +1,15 @@
+id: RULE_SSH_BRUTEFORCE
+title: SSH Brute Force from single IP
+severity: high
+description: Detect >=10 failed SSH passwords from the same source IP within 5 minutes.
+tags: [mitre-attack.T1110, brute-force]
+where:
+  all:
+    - field: event.module
+      equals: auth
+    - field: event.action
+      equals: FAILED_PASSWORD
+aggregate:
+  group_by: source.ip
+  within: 5m
+  count: ">=10"
